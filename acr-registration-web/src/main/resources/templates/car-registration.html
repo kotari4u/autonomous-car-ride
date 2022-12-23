@@ -1,0 +1,22 @@
+<div th:switch="${autonomousCars}">
+    <h2 th:case="null">No Cars yet!</h2>
+    <div th:case="*">
+        <h2>Users</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Model</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="model : ${model}">
+                <td th:text="${model}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/add-autonomous-car">Add a new car</a></p>
+</div>

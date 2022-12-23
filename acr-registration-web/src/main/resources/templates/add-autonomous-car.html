@@ -1,0 +1,6 @@
+<form action="#" th:action="@{/add-autonomous-car}" th:object="${autonomousCar}" method="post">
+    <label for="model">Name</label>
+    <input type="text" th:field="*{model}" id="model" placeholder="model">
+    <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}"></span>
+    <input type="submit" value="Add Car">
+</form>
