@@ -1,4 +1,4 @@
-package com.sai.aws.acr.registration.entity;
+package com.sai.aws.acr.registration.dataaccess.entity;
 
 public enum RunsOn {
 	SOLAR,

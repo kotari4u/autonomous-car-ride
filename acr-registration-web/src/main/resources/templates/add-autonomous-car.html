@@ -2,5 +2,38 @@
     <label for="model">Name</label>
     <input type="text" th:field="*{model}" id="model" placeholder="model">
     <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}"></span>
+    <br/><br/>
+
+    <label for="model">Num seats</label>
+    <input type="text" th:field="*{numSeats}" id="numSeats" placeholder="numSeats">
+    <span th:if="${#fields.hasErrors('numSeats')}" th:errors="*{numSeats}"></span>
+    <br/><br/>
+
+    <label for="model">Charge Per Mile</label>
+    <input type="text" th:field="*{chargePerMile}" id="chargePerMile" placeholder="chargePerMile">
+    <span th:if="${#fields.hasErrors('chargePerMile')}" th:errors="*{chargePerMile}"></span>
+    <br/><br/>
+
+    <label for="model">Runs On</label>
+    <select name="runsOn">
+        <option th:each="runsOn : ${T(com.sai.aws.acr.registration.dataaccess.entity.RunsOn).values()}"
+                th:value="${runsOn}" th:text="${runsOn}"></option>
+    </select>
+    <br/><br/>
+
+    <label for="haveAudio">Audio ? </label>
+    <input name="haveAudio" type="checkbox" class="custom-control-input" th:checked="${haveAudio}"
+           th:id="haveAudio" />
+    <br/><br/>
+
+    <label for="haveVideo">Video ? </label>
+    <input name="haveVideo" type="checkbox" class="custom-control-input" th:checked="${haveVideo}"
+           th:id="haveVideo" />
+    <br/><br/>
+
+    <label for="haveLeatherSeating">Leather Seating ? </label>
+    <input name="haveLeatherSeating" type="checkbox" class="custom-control-input" th:checked="${haveLeatherSeating}"
+           th:id="haveLeatherSeating" />
+    <br/><br/>
     <input type="submit" value="Add Car">
 </form>

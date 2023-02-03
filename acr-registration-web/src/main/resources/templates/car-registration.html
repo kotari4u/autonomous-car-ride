@@ -2,21 +2,30 @@
     <h2 th:case="null">No Cars yet!</h2>
     <div th:case="*">
         <h2>Users</h2>
-        <table>
+        <table border="1">
             <thead>
             <tr>
                 <th>Model</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>RunsOn</th>
+                <th>NumSeats</th>
+                <th>Audio</th>
+                <th>Video</th>
+                <th>LeatherSeating</th>
+                <th>ChargePerMile</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="model : ${model}">
-                <td th:text="${model}"></td>
+            <tr th:each="autonomousCar : ${autonomousCars}">
+                <td th:text="${autonomousCar.model}"></td>
+                <td th:text="${autonomousCar.runsOn}"></td>
+                <td th:text="${autonomousCar.numSeats}"></td>
+                <td th:text="${autonomousCar.haveAudio} ? 'Yes' : 'No'"></td>
+                <td th:text="${autonomousCar.haveVideo} ? 'Yes' : 'No'"></td>
+                <td th:text="${autonomousCar.haveLeatherSeating} ? 'Yes' : 'No'"></td>
+                <td th:text="${autonomousCar.chargePerMile}"></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <p><a href="/add-autonomous-car">Add a new car</a></p>
+    <p><a href="/signup">Add a new car</a></p>
 </div>

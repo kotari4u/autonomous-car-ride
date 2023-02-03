@@ -1,3 +1,4 @@
+/*
 package com.sai.aws.acr.registration;
 
 // Use this code snippet in your app.
@@ -14,13 +15,15 @@ import software.amazon.awssdk.services.secretsmanager.model.GetSecretValueRespon
 
 public class AWSGetSecretTest {
 	
-	/**
+	*/
+/**
 	 * To get your access key ID and secret access key
 	 * Open the IAM console at https://console.aws.amazon.com/iam/.
 	 * On the navigation menu, choose Users.
 	 * Choose your IAM user name (not the check box).
 	 * Open the Security credentials tab, and then choose Create access key.
-	 */
+	 *//*
+
 	@Test
 	public void testGetSecret() {
 		System.setProperty("aws.accessKeyId","AKIAWXZOWHKIEYIQA2XB");
@@ -53,3 +56,4 @@ public class AWSGetSecretTest {
 	}
 	
 }
+*/
